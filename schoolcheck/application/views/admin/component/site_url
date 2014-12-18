@@ -1,0 +1,54 @@
+<?php $this->load->view('admin/component/page_head.php');?>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-default" role="navigation">
+  
+   <div>
+      <ul class="nav navbar-nav">
+         <li class="active"><a href="<?php echo site_url('admin/dashboard') ?>"><?php echo $meta_title;?></a></li>
+         <li><?php echo anchor('admin/page','pages') ?></li>
+          <li><?php echo anchor('admin/user','users') ?></li>
+
+         <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+               Java 
+               <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+               <li><a href="#">jmeter</a></li>
+               <li><a href="#">EJB</a></li>
+               <li><a href="#">Jasper Report</a></li>
+               <li class="divider"></li>
+               <li><a href="#">Separated link</a></li>
+               <li class="divider"></li>
+               <li><a href="#">One more separated link</a></li>
+            </ul>
+         </li>
+      </ul>
+   </div>
+</nav>
+</div>
+
+  <div class="container">
+    <div class="row">
+
+      <!-- Main column -->
+        <div class="span9">
+          <section>
+          <?php $this->load->view($subview);?>  
+
+          </section>
+      <!-- End of main column -->
+    </div>
+
+    <!-- SideBar -->
+
+      <div class="span3">
+        <section>
+            <?php echo mailto('manpandey321@gmail.com','<i class="icon-user"></i>manpandey321');?><br>
+            <?php echo anchor('admin/user/logout','<i class="icon-off"></i>logout');?>
+        </section>
+      </div>
+    <!-- End of side bar -->
+    </div>
+  <?php $this->load->view('admin/component/page_tail.php');?>
